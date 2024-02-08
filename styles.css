@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Inter', sans-serif; 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;  
+    color: white;
+  }
+  
+  #container-wrapper {
+    position: relative;
+  }
+  
+  #canvas-container {
+    position: relative;
+    background-color: transparent;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  #uploadButton,
+  #saveButton {
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif; 
+    margin: 16px;
+    cursor: pointer;
+    color: #ffff;
+    background-color: #ff5a00;
+    font-size: 18px;
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+  }
+  
+  #uploadButton:hover,
+  #saveButton:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  #saveButton {
+    display: none;
+  }
+  
+  #closeButton {
+    opacity: 0.5;
+    cursor: pointer;
+    font-size: 18px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffff;
+    background-color: #ff5a00;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+  
+  #closeButton:hover {
+    opacity: 1;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #container-wrapper {
+      width: 100%;
+    }
+    #canvas-container {
+      width: 100%;
+      max-width: 300px;
+      max-height: 300px;
+      margin: auto;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .konvajs-content {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      position: relative;
+      user-select: none;
+    }
+    .konvajs-content canvas {
+      width: 100% !important;
+      height: auto !important;
+      max-width: 250px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  
