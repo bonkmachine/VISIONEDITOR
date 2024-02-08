@@ -16,6 +16,7 @@
     min-height: 100vh;
     font-family: 'Inter', sans-serif;  
     color: white;
+    text-align: center;
   }
   
   #container-wrapper {
@@ -91,7 +92,7 @@
     }
     .konvajs-content {
       width: 100%;
-      max-width: 250px;
+      max-width: 300px;
       height: auto;
       position: relative;
       user-select: none;
@@ -99,7 +100,7 @@
     .konvajs-content canvas {
       width: 100% !important;
       height: auto !important;
-      max-width: 250px;
+      max-width: 300px;
       position: absolute;
       top: 0;
       left: 0;
