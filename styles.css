@@ -1,111 +1,143 @@
 @font-face {
-    font-family: 'Inter', sans-serif; 
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Inter', sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;  
+  color: black;
+  text-align: center;
+}
+
+#container-wrapper {
+  position: relative;
+}
+
+#canvas-container {
+  position: relative;
+  background-color: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#uploadButton,
+#saveButton {
+  font-family: 'Inter', sans-serif; 
+  margin: 16px;
+  cursor: pointer;
+  color: #ffff;
+  background-color: #ff5a00;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border-color: transparent;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#uploadButton:hover,
+#saveButton:hover {
+  background-color: black;
+  color: white;
+}
+
+#saveButton {
+  display: none;
+}
+
+#closeButton {
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 18px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffff;
+  background-color: #ff5a00;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+#closeButton:hover {
+  opacity: 1;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+  background-size: 16px 16px;
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+}
+
+.footer {
+  position: fixed;
+  bottom: 2%;
+  left: 0;
+  width: 100%;
+  color: #8f8f8f;
+  text-align: center;
+}
+
+h1 a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover,
+h1 a:hover {
+  color: #ff5a00;
+}
+
+@media screen and (max-width: 768px) {
+  #container-wrapper {
+    width: 100%;
   }
-  
-  body {
-    margin: 0;
-    padding: 0;
+  #canvas-container {
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
     overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: #000;
-    min-height: 100vh;
-    font-family: 'Inter', sans-serif;  
-    color: white;
-    text-align: center;
+    align-items: center;
   }
-  
-  #container-wrapper {
+  .konvajs-content {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     position: relative;
+    user-select: none;
   }
-  
-  #canvas-container {
-    position: relative;
-    background-color: transparent;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  
-  #uploadButton,
-  #saveButton {
-    letter-spacing: 2px;
-    font-family: 'Inter', sans-serif; 
-    margin: 16px;
-    cursor: pointer;
-    color: #ffff;
-    background-color: #ff5a00;
-    font-size: 18px;
-    padding: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border-radius: 20px;
-  }
-  
-  #uploadButton:hover,
-  #saveButton:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  #saveButton {
-    display: none;
-  }
-  
-  #closeButton {
-    opacity: 0.5;
-    cursor: pointer;
-    font-size: 18px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  .konvajs-content canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 300px;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #ffff;
-    background-color: #ff5a00;
-    width: 40px;
-    height: 40px;
-    text-align: center;
+    top: 0;
+    left: 0;
   }
-  
-  #closeButton:hover {
-    opacity: 1;
-  }
-  
-  @media screen and (max-width: 768px) {
-    #container-wrapper {
-      width: 100%;
-    }
-    #canvas-container {
-      width: 100%;
-      max-width: 300px;
-      max-height: 300px;
-      margin: auto;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .konvajs-content {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      position: relative;
-      user-select: none;
-      justify-content: center;
-      align-items: center;
-    }
-    .konvajs-content canvas {
-      width: 100% !important;
-      height: auto !important;
-      max-width: 300px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-    }
-  }
-  
+}
