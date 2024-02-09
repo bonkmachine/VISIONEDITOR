@@ -140,4 +140,8 @@ h1 a:hover {
     top: 0;
     left: 0;
   }
+
+  .footer {
+    font-size: 12px;
+  }
 }
