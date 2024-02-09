@@ -1,8 +1,8 @@
 let fixedCanvasWidth, maxCanvasHeight;
 
 if (window.innerWidth <= 768) {
-  fixedCanvasWidth = 250;
-  maxCanvasHeight = 250;
+  fixedCanvasWidth = 300;
+  maxCanvasHeight = 300;
 } else {
   fixedCanvasWidth = 600;
   maxCanvasHeight = 600;
