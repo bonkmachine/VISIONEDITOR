@@ -96,14 +96,16 @@
       height: auto;
       position: relative;
       user-select: none;
+      justify-content: center;
+      align-items: center;
     }
     .konvajs-content canvas {
       width: 100% !important;
       height: auto !important;
       max-width: 300px;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
     }
   }
   
