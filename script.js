@@ -173,7 +173,7 @@ const resetCanvas = () => {
     width: stage.width(),
     height: stage.height(),
     stroke: "white",
-    strokeWidth: 5,
+    strokeWidth: 3,
     cornerRadius: 20,
   });
   layer.add(canvasBorder);
