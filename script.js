@@ -39,8 +39,8 @@ const addMustacheToCanvas = () => {
     let newMustacheWidth, newMustacheHeight;
 
     if (window.innerWidth <= 768) {
-      newMustacheWidth = 150;
-      newMustacheHeight = 150 / aspectRatio;
+      newMustacheWidth = 200;
+      newMustacheHeight = 200 / aspectRatio;
     } else {
       newMustacheWidth = 400;
       newMustacheHeight = 400 / aspectRatio;
