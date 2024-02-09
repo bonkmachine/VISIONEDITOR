@@ -28,9 +28,6 @@ const addMustacheToCanvas = () => {
   canvasBorder = new Konva.Rect({
     width: stage.width(),
     height: stage.height(),
-    stroke: "white",
-    strokeWidth: 3,
-    cornerRadius: 20,
   });
 
   layer.add(canvasBorder);
@@ -42,11 +39,11 @@ const addMustacheToCanvas = () => {
     let newMustacheWidth, newMustacheHeight;
 
     if (window.innerWidth <= 768) {
-      newMustacheWidth = 100;
-      newMustacheHeight = 100 / aspectRatio;
+      newMustacheWidth = 150;
+      newMustacheHeight = 150 / aspectRatio;
     } else {
-      newMustacheWidth = 250;
-      newMustacheHeight = 250 / aspectRatio;
+      newMustacheWidth = 400;
+      newMustacheHeight = 400 / aspectRatio;
     }
 
     if (newMustacheHeight > maxCanvasHeight) {
@@ -172,9 +169,6 @@ const resetCanvas = () => {
   canvasBorder = new Konva.Rect({
     width: stage.width(),
     height: stage.height(),
-    stroke: "white",
-    strokeWidth: 3,
-    cornerRadius: 20,
   });
   layer.add(canvasBorder);
   layer.batchDraw();
