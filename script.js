@@ -1,3 +1,18 @@
+let selectedMustacheType = 1; // Default mustache type
+
+// Array of mustache URLs
+const mustacheURLs = [
+  "https://i.ibb.co/pd1qxyg/1.png",
+  "https://i.ibb.co/9hQbJL4/blue-phat.png", // Replace with actual URL for mustache type 2
+  "https://i.ibb.co/abc456/3.png", // Replace with actual URL for mustache type 3
+  "https://i.ibb.co/def789/4.png", // Replace with actual URL for mustache type 4
+  "https://i.ibb.co/ghi012/5.png", // Replace with actual URL for mustache type 5
+  "https://i.ibb.co/jkl345/6.png", // Replace with actual URL for mustache type 6
+  "https://i.ibb.co/mno678/7.png", // Replace with actual URL for mustache type 7
+  "https://i.ibb.co/pqr901/8.png", // Replace with actual URL for mustache type 8
+  "https://i.ibb.co/stu234/9.png", // Replace with actual URL for mustache type 9
+];
+
 let fixedCanvasWidth, maxCanvasHeight;
 
 if (window.innerWidth <= 768) {
@@ -21,9 +36,26 @@ let mustache;
 let canvasBorder;
 let tr;
 
-const addMustacheToCanvas = () => {
-  const mustacheImageSrc =
-    "https://i.ibb.co/pd1qxyg/1.png";
+// Function to change mustache type based on the dropdown selection
+const changeMustacheType = () => {
+  tr.visible(false); // Hide the transformer before destroying the existing mustache
+  if (mustache) {
+    mustache.destroy(); // Remove the existing mustache
+  }
+  addMustacheToCanvas(mustacheURLs[selectedMustacheType - 1]); // Add the new mustache
+};
+
+// Event listener for dropdown change
+$("#mustacheType").change(function () {
+  selectedMustacheType = parseInt($(this).val());
+  changeMustacheType();
+});
+
+const addMustacheToCanvas = (mustacheImageSrc) => {
+  if (mustache) {
+    mustache.destroy();
+    tr.destroy();
+  }
 
   canvasBorder = new Konva.Rect({
     width: stage.width(),
@@ -39,8 +71,8 @@ const addMustacheToCanvas = () => {
     let newMustacheWidth, newMustacheHeight;
 
     if (window.innerWidth <= 768) {
-      newMustacheWidth = 200;
-      newMustacheHeight = 200 / aspectRatio;
+      newMustacheWidth = 150;
+      newMustacheHeight = 150 / aspectRatio;
     } else {
       newMustacheWidth = 400;
       newMustacheHeight = 400 / aspectRatio;
@@ -78,7 +110,6 @@ const addMustacheToCanvas = () => {
         }
         return newBox;
       },
-
       padding: 10,
       rotateEnabled: true,
     });
@@ -92,6 +123,8 @@ const addMustacheToCanvas = () => {
         layer.batchDraw();
       }
     });
+
+    tr.visible(mustache.draggable()); // Set transformer visibility based on mustache draggable property
 
     layer.add(canvasBorder);
     layer.add(mustache);
@@ -129,7 +162,7 @@ const changeCanvasBackground = (imageSrc) => {
 
     layer.destroyChildren();
     layer.add(bg);
-    addMustacheToCanvas();
+    addMustacheToCanvas(mustacheURLs[selectedMustacheType - 1]); // Add mustache based on the selected type
     layer.batchDraw();
     $("#uploadButton").hide();
     $("#closeButton").show();
@@ -160,7 +193,7 @@ const saveCanvasAsImage = () => {
 
 const resetCanvas = () => {
   $("#uploadButton").show();
-  addMustacheToCanvas();
+  addMustacheToCanvas(mustacheURLs[selectedMustacheType - 1]); // Add mustache based on the selected type
   $("#closeButton").hide();
   $("#saveButton").hide();
   layer.destroyChildren();
@@ -177,7 +210,7 @@ const resetCanvas = () => {
 $(document).ready(function () {
   $("#closeButton").hide();
   $("#saveButton").hide();
-  addMustacheToCanvas();
+  addMustacheToCanvas(mustacheURLs[selectedMustacheType - 1]); // Add mustache based on the selected type
 });
 
 $("#uploadButton").click(function () {
