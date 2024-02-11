@@ -18,6 +18,15 @@ body {
   text-align: center;
 }
 
+#visionselector {
+  margin-bottom: 12px;
+}
+
+#mustacheType {
+  margin-left: 8px;
+  padding: 1px 4px;
+}
+
 #container-wrapper {
   position: relative;
 }
@@ -139,9 +148,5 @@ h1 a:hover {
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  .footer {
-    font-size: 12px;
   }
 }
