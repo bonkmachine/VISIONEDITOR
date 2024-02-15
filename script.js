@@ -2,7 +2,7 @@ let selectedMustacheType = 1; // Default mustache type
 
 // Array of mustache URLs
 const mustacheURLs = [
-  "https://i.ibb.co/pd1qxyg/1.png",
+  "https://i.ibb.co/j3b1g48/visionbonk.png",
   "https://i.ibb.co/9hQbJL4/blue-phat.png", // Replace with actual URL for mustache type 2
   "https://i.ibb.co/abc456/3.png", // Replace with actual URL for mustache type 3
   "https://i.ibb.co/def789/4.png", // Replace with actual URL for mustache type 4
