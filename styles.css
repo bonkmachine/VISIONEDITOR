@@ -5,9 +5,8 @@
 }
 
 body {
-  margin: 0;
+  margin: 1%;
   padding: 0;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +44,7 @@ body {
   cursor: pointer;
   color: #ffff;
   background-color: #ff5a00;
-  font-size: 16px;
+  font-size: 18px;
   padding: 8px 12px;
   border-radius: 20px;
   border-color: transparent;
@@ -95,8 +94,9 @@ body {
 }
 
 .footer {
-  position: fixed;
-  font-size: 10px;
+  position: relative;
+  margin-top: 60px;
+  font-size: 12px;
   bottom: 2%;
   left: 0;
   width: 100%;
@@ -149,5 +149,8 @@ h1 a:hover {
     position: absolute;
     top: 0;
     left: 0;
+  }
+  .footer {
+    font-size: 10px;
   }
 }
