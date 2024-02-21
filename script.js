@@ -2,15 +2,7 @@ let selectedMustacheType = 1; // Default mustache type
 
 // Array of mustache URLs
 const mustacheURLs = [
-  "https://i.ibb.co/j3b1g48/visionbonk.png",
-  "https://i.ibb.co/9hQbJL4/blue-phat.png", // Replace with actual URL for mustache type 2
-  "https://i.ibb.co/abc456/3.png", // Replace with actual URL for mustache type 3
-  "https://i.ibb.co/def789/4.png", // Replace with actual URL for mustache type 4
-  "https://i.ibb.co/ghi012/5.png", // Replace with actual URL for mustache type 5
-  "https://i.ibb.co/jkl345/6.png", // Replace with actual URL for mustache type 6
-  "https://i.ibb.co/mno678/7.png", // Replace with actual URL for mustache type 7
-  "https://i.ibb.co/pqr901/8.png", // Replace with actual URL for mustache type 8
-  "https://i.ibb.co/stu234/9.png", // Replace with actual URL for mustache type 9
+  "https://i.ibb.co/qB7JWtz/vision-nobonk.png",
 ];
 
 let fixedCanvasWidth, maxCanvasHeight;
