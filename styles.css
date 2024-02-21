@@ -43,17 +43,17 @@ body {
   margin: 16px;
   cursor: pointer;
   color: #ffff;
-  background-color: #ff5a00;
+  background: linear-gradient(90deg, #000, #000);
+  border: none;
   font-size: 18px;
   padding: 8px 12px;
   border-radius: 20px;
-  border-color: transparent;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 #uploadButton:hover,
 #saveButton:hover {
-  background-color: black;
+  background: linear-gradient(90deg, #9945FF, #14F195);
   color: white;
 }
 
@@ -72,7 +72,7 @@ body {
   top: 10px;
   right: 10px;
   color: #ffff;
-  background-color: #ff5a00;
+  background: linear-gradient(90deg, #9945FF, #14F195);
   width: 40px;
   height: 40px;
   text-align: center;
@@ -105,7 +105,10 @@ body {
 }
 
 h1 a {
-  color: black;
+  background: linear-gradient(90deg, #9945FF, #14F195);
+  /* Adjust the angle (here, 90deg for a horizontal gradient) based on your preference */
+  background-clip: text;
+  color: transparent; /* Make the text color transparent */
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -118,7 +121,7 @@ h1 a {
 
 .footer a:hover,
 h1 a:hover {
-  color: #ff5a00;
+  color: #000;
 }
 
 @media screen and (max-width: 768px) {
@@ -152,6 +155,5 @@ h1 a:hover {
   }
   .footer {
     font-size: 10px;
-    margin-top: 30px;
   }
 }
